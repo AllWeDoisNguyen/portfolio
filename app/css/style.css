@@ -1,0 +1,53 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: "Roboto", "Helvetica", sans-serif;
+  font-weight: 300; }
+
+body, html {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #9c27b0;
+  padding: 5px; }
+  body h1 {
+    margin: 0 0 .5em 0;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px #000000;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7); }
+  body #centerbox {
+    width: 500px;
+    margin: 0 auto; }
+
+article.highlight {
+  margin-bottom: 10px;
+  width: 500px;
+  padding: 5px;
+  font-size: 0.9em;
+  color: #cecece;
+  background: #000000;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #000000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  /* 
+    all elements in this element will change 
+    color through a 0.1 second lasting linear
+    transition.
+  */
+  /*
+    change the text-color on hover, the color 
+    in span will not change due to !important.
+  
+    additionally, the .hover class on the 
+    article.highlight element will achieve
+    the same result.
+  */ }
+  article.highlight * {
+    transition: color 0.1s linear; }
+  article.highlight span {
+    color: #cecece !important; }
+  article.highlight p {
+    margin: 0; }
+  article.highlight:hover, article.highlight.hover {
+    color: #333333; }
