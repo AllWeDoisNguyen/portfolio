@@ -8,7 +8,7 @@
 .cape,
 .logo,
 .group,
-.fringe,
+.bangs,
 .eye,
 .profile-card,
 .yes,
@@ -88,10 +88,10 @@ body {
 
 .ear {
   z-index: 4;
-  top: 86px;
+  top: 96px;
   left: 61px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 24px;
   border-radius: 100%;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -99,7 +99,7 @@ body {
   display: none; }
   .ear:before {
     position: absolute;
-    top: 5px;
+    top: 3px;
     left: 4px;
     content: '';
     width: 20px;
@@ -107,12 +107,13 @@ body {
     border-radius: 100%;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
-    background: #ED8A80; }
+    background: #DB9B99; }
 
-.ear.right {
-  left: 130px; }
+.ear.left {
+  left: 130px;
+  display: block; }
 
-.fringe {
+.bangs {
   z-index: 99;
   top: 40px;
   left: 135px;
@@ -122,7 +123,7 @@ body {
   /* background: yellow; */
   border-radius: 100%;
   transform: rotate(-30deg); }
-  .fringe:before {
+  .bangs:before {
     position: absolute;
     content: '';
     top: -39px;
