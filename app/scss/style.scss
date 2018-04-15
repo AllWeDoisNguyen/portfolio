@@ -1,8 +1,11 @@
 // $skin: #F0BEAF;
 $skin: #fcd9a6;
 $grey: #424B54;
-$brown: #2e221c;
-$pink: rgb(246, 130, 130);
+// $brown: #2e221c;
+$brown: #3d261b;
+$light-brown: #925b3f;
+$pink2: rgb(246, 130, 130);
+$pink: rgb(102, 33, 67);
 $blue: rgb(17, 18, 51);
 @mixin border($b) {
   border-radius: $b;
@@ -24,6 +27,8 @@ $blue: rgb(17, 18, 51);
 .eye,
 .profile-card,
 .yes,
+.glasses,
+.bridge,
 .no,
 .info,
 .tongue,
@@ -111,8 +116,8 @@ body {
   }
 }
 .shoulder-hair {
-  background: #2e221c;
-  // background: yellow;
+  // background: #2e221c;
+  background: $brown;
   height: 80px;
   width: 45px;
   top: 122px;
@@ -163,8 +168,8 @@ body {
   left: 65px;
   width: 30px;
   height: 70px;
-  background: #2e221c;
-  /* background: yellow; */
+  // background: #2e221c;
+  background: $brown; 
   border-radius: 43%;
   transform: rotate(28deg);
   &:before {
@@ -185,8 +190,8 @@ body {
     left: 18px;
     width: 16px;
     height: 63px;
-    background: #2e221c;
-    /* background-color: yellow; */
+    // background: #2e221c;
+    background-color: $brown;
     /* border-radius: 100%; */
     -webkit-border-radius: 98%;
     -moz-border-radius: 100%;
@@ -253,49 +258,104 @@ body {
   &:before {
     position: absolute;
     content: '';
-    left: 50px;
+    left: 48px;
     width: 10px;
     height: 10px;
     background: #424B54;
     @include border(100%);
   }
 }
-
-
-.blush {
-  z-index: 999;
-  top: 116px;
-  left: 77px;
-  width: 10px;
-  height: 7px;
-  background: #E3879E;
-  @include border(100%);
-  opacity: 0.4;
-  &:before{
+.glasses {
+  z-index: 100;
+  top: 98px;
+  left: 67px;
+  width: 37px;
+  height: 21px;
+  background: transparent;
+  border: 2px solid $light-brown;
+  border-top-left-radius: 0;
+  border-top-right-radius: 25%;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 65%;
+  &:before {
     position: absolute;
     content: '';
-    left: 58px;
-    width: 10px;
-  height: 7px;
-  background: #E3879E;
-  @include border(100%);
-    
+    left: 46px;
+    top: -2px;
+    width: 36px;
+    height: 21px;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 65%;
+    border-bottom-left-radius: 100%;
+    border: 2px solid $light-brown;
   }
 }
-
+.bridge {
+  // z-index: 20;
+  // top: 100px;
+  // left: 107px;
+  // width: 8px;
+  // height: 14px;
+  // background: #DB9B99;
+  // @include border(100px);
+  z-index: 20;
+  top: 100px;
+  left: 103px;
+  width: 14px;
+  height: 4px;
+  // background: #925b3f;
+  /* border-radius: 100px; */
+  /* -webkit-border-radius: 100px; */
+  // background: #DB9B99;
+  background: $light-brown;
+  /* border-radius: 100px; */
+  /* -webkit-border-radius: 100px; */
+  // -moz-border-radius: 100px;
+}
 .nose {
   z-index: 20;
   top: 100px;
   left: 107px;
   width: 8px;
   height: 14px;
-  background: #DB9B99;
-  @include border(100px);
+  background: transparent;
+  border: 2px solid $light-brown;
+  border-top-left-radius: 0;
+  border-top-right-radius: 25%;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 65%;
+  display: none;
 }
+
+.blush {
+  z-index: 999;
+  top: 115px;
+  left: 79px;
+  width: 12px;
+  height: 21px;
+  background: #E3879E;
+  opacity: 0.1;
+  transform: rotate(-35deg);
+  @include border(100%);
+  &:before{
+    position: absolute;
+    content: '';
+    left: 42px;
+    width: 12px;
+    top: 29px;
+    height: 21px;
+    background: #E3879E;
+    transform: rotate(68deg);
+    @include border(100%);
+    
+  }
+}
+
 
 .mouth {
   z-index: 20;
-  top: 125px;
+  top: 127px;
   left: 96px;
   width: 30px;
   height: 15px;
@@ -309,7 +369,7 @@ body {
   left: 8px;
   width: 30px;
   height: 20px;
-  background: $pink;
+  background: $pink2;
   @include border(100%);
 }
 
@@ -317,15 +377,18 @@ body {
   z-index: 13;
   width: 30px;
   height: 40px;
-  background: $skin;
-  top: 130px;
+  background: #fcd9a6;
+  top: 134px;
   left: 97px;
-  @include border(100%);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
 }
 
 .body {
   z-index: 10;
-  top: 153px;
+  top: 155px;
   left: 50px;
   width: 122px;
   height: 150px;
